@@ -1,0 +1,151 @@
+/*Copy and paste your blog article HTML into the index.html file for this exercise. 
+For each article on your blog page, you need to have the following things to be unique.
+
+A different background color.
+A different font family.
+A different font size.
+A different font color.
+A different line height.
+A different padding value.
+Each should have a border, but with rounded corners of different size 
+(e.g. one article could have barely rounded borders, but the next one could be almost circular in shape)
+*/
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  text-shadow: 3px 3px #ff0000;
+}
+
+.title {
+  font-size: 2em;
+  background-color: #3d5c5c;
+  color: #fff;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #e1eaea;
+
+}
+
+.container:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.articles {
+  width: 80%;
+  margin: auto;
+}
+
+.articles:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+
+.article--left {
+  width: 40%;
+  float: left;
+  padding: 2.5%;
+  margin: 5%;
+  box-sizing: border-box;
+}
+
+.article--right {
+  width: 40%;
+  float: right;
+  padding: 2.5%;
+  margin: 5%;
+  box-sizing: border-box;
+}
+
+
+/*.article--left:hover,
+.article--right:hover {
+  background-color: #fff;
+  border-radius: 5%;
+  -webkit-box-shadow: inset 0px 0px 81px -13px rgba(0,0,0,0.4);
+  -moz-box-shadow: inset 0px 0px 81px -13px rgba(0,0,0,0.4);
+  box-shadow: inset 0px 0px 81px -13px rgba(0,0,0,0.4);
+}
+*/
+.one {
+  color: #999;
+  line-height: 1em;
+  font-size: 10px;
+  font-family: 'Finger Paint', cursive;
+  background-color: #c2d6c2;
+  padding: 1%;
+  border: 2px solid black;
+  border-radius: 10px;
+
+}
+
+.two {
+  color: #491288;
+  line-height: 1.3em;
+  font-size: 9px;
+  font-family: 'Butcherman', cursive;
+  background-color: #d6c7c2;
+  padding: 4%;
+  border: 5px solid black;
+  border-radius: 25px;
+}
+
+.three{
+  color: #ababd6;
+  line-height: 1.5em;
+  font-size: 20px;
+  font-family: 'Cinzel Decorative', cursive;
+  background-color: #c2d6d6;
+  padding: 8%;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.four{
+  color: #1e4f28;
+  line-height: 2.3em;
+  font-size: 14px;
+  font-family: 'Caesar Dressing', cursive;
+  background-color: #c2c2d6;
+  padding: 2.5%;
+  border: 10px solid black;
+  border-radius: 50px;
+}
+
+.five{
+  color: #fff;
+  line-height: 1.7em;
+  font-style: 18px;
+  font-family: 'Uncial Antiqua', cursive;
+  background-color: #d6c2c7;
+  padding: 10%;
+  border: 3px solid black;
+  border-radius: 100%;
+}
+
+
+img {
+  max-width: 80%;
+}
+
+footer {
+  margin: 2%;
+}
+
+.clear {
+  clear: both;
+}
