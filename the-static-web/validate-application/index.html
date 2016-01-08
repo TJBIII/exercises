@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Validate-application</title>
+    <link rel="stylesheet" href="validation.css">
+  </head>
+
+  <form action="form.html" method="POST">
+      <fieldset>
+        <legend>Applicant Info</legend>
+        <label for="first-name" >First name:</label>
+        <input type="text" name="first-name" autofocus>
+        <br/>
+        <label for="middle-initial">Middle initial:</label>
+        <input type="text" name="middle-initial">
+        <br/>
+        <label for="last-name">Last name:</label>
+        <input type="text" name="last-name">
+        <br/>
+        <label for="email-address">Email:</label>
+        <input class="validate" type="email" name="email" placeholder="you@somewhere.com">
+        <br/>
+        <label for="telephone">Phone #:</label>
+        <input class="validate" type="tel" name="telephone" placeholder="888-888-8888">
+        <br/>
+        <label for="address">Your address:</label>
+        <input type="text" name="address">
+        <br/>
+        <label for="city">City:</label>
+        <input type="text" name="city">
+        <br/>
+        <label for="state">State:</label>
+        <input type="text" name="state">
+        <br/>
+        <label for="zip">Zip:</label>
+        <input type="text" name="zip">
+        <br/>
+        <label for="occupation">Your occupation:</label>
+        <input type="text" name="occupation">
+        <br/>
+        <label for="employer">Your employer:</label>
+        <input type="text" name="employer">
+        <br/>
+        <label for="employer-address">Employer address:</label>
+        <input type="text" name="employer-address">
+        <br/>
+        <label for="employer-city">Employer City:</label>
+        <input type="text" name="employer-city">
+        <label for="employer-state">Employer State:</label>
+        <input type="text" name="employer-state">
+        <label for="employer-zip">Employer Zip:</label>
+        <input type="text" name="emplyer-zip">
+        <br/>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Loan</legend>
+      
+        <select name="loan-type">
+          <option value="commercial">Commercial</option>
+          <option value="real-estate">Real Estate </option>
+          <option value="personal">Personal</option>
+          <option value="mortgage">Mortgage</option>
+        </select>
+        <br/>
+        <label for="amount-of-loan">Loan amount:</label>
+        <input type="text" name="amount-of-loan">
+      </fieldset>
+      <fieldset>
+        <legend>Loan Length</legend>
+        <input type="radio" name="loan-length" value="5-years"> 5 Years
+        <input type="radio" name="loan-length" value="15-years"> 15 Years
+        <input type="radio" name="loan-length" value="30-years"> 30 Years
+      </fieldset>
+        
+      <fieldset>
+        <legend>Additonal:</legend>
+        <label for="comments">Comments:</label><br/>
+        <textarea id="comments" name="comments"></textarea>
+      </fieldset>
+
+      <input type="submit" value="Submit Details"></input>
+    </form>
+
