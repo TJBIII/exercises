@@ -40,7 +40,7 @@ function determineConverter (clickEvent) {
     } else if (newTemp < 32) {
       answerElement.style.color = "blue";
     } else {
-      answer.style.color = "green";
+      answerElement.style.color = "green";
     }
   } else if (celsiusChecked) {
     newTemp = toCelsius(temp);
@@ -50,7 +50,7 @@ function determineConverter (clickEvent) {
     if (newTemp < 0){
       answerElement.style.color = "blue";
     } else {
-      answer.style.color = "green";
+      answerElement.style.color = "green";
     }
   } else {
     console.log("Radio button not selected");
