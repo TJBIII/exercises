@@ -25,7 +25,7 @@ function coinCounter (amount) {
   amount -=  coinPurse.nickels * 0.05;
 
   coinPurse.pennies = Math.floor(amount / 0.01);
-  amount -= coinPurse.dimes * 0.01;
+  amount -= coinPurse.pennies * 0.01;
 
   return coinPurse;
 }
