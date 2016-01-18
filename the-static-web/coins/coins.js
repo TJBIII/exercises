@@ -16,19 +16,23 @@ function coinCounter (amount) {
 
 
   coinPurse.quarters = Math.floor(amount / .25);
-  amount -= coinPurse.quarters * 0.25;
+  amount = (amount - coinPurse.quarters * 0.25).toFixed(2);
+
+  console.log("amount after quarters",  amount);
 
   coinPurse.dimes = Math.floor(amount / .10);
-  amount -= coinPurse.dimes * 0.1;
+  amount = (amount - coinPurse.dimes * 0.1).toFixed(2);
+  console.log("amount after dimes",  amount);
 
   coinPurse.nickels = Math.floor(amount / 0.05);
-  amount -=  coinPurse.nickels * 0.05;
+  amount = (amount - coinPurse.nickels * 0.05).toFixed(2);
+  console.log("amount after nickels",  amount);
 
+  
   coinPurse.pennies = Math.floor(amount / 0.01);
-  amount -= coinPurse.pennies * 0.01;
 
   return coinPurse;
 }
 
-var coins = coinCounter(0.67);
+var coins = coinCounter(0.95);
 console.log(coins);
