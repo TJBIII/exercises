@@ -22,7 +22,6 @@ var outputEl = document.getElementById("output");
 
 
 inputEl.addEventListener("keyup", function() {
-  console.log(inputEl.value.match(/[0-9]/g));
   if (inputEl.value.match(/[0-9]/g)){
 
     //remove any numbers when typed in
