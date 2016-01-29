@@ -10,7 +10,7 @@ var SandwichMaker = (function(maker) {
 
   // Augment the original object with another method
   maker.addMeat = function(option) {
-    maker.updatePrice(meatPrices[option]);
+    return meatPrices[option];
   };
 
   // Return the new, augmented object with the new method on it
