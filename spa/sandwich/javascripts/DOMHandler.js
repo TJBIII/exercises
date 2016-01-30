@@ -18,69 +18,70 @@ var condimentsChooser = document.getElementById("condiments-chooser");
 var veggieChooser = document.getElementById("veggies-chooser");
 
 
+meatChooser.addEventListener("change", calcPrice);
+condimentsChooser.addEventListener("change", calcPrice);
+cheeseChooser.addEventListener("change", calcPrice);
+veggieChooser.addEventListener("change", calcPrice);
+breadChooser.addEventListener("change", calcPrice)
 
-//Meat
-meatChooser.addEventListener("change", function(event) {
-  //loop through and get all selected options 
+
+function calcPrice() {
+
+  // Variable to hold the final price. Default to 0.
+  var finalSandwichPrice = 0;
+
+  //loop through and get all selected meat options 
   for (var i = 0; i < meatChooser.options.length; i++){
     if (meatChooser.options[i].selected){
-      console.log(meatChooser.options[i].value);
+      console.log(meatChooser.options[i].value, SandwichMaker.addMeat(meatChooser.options[i].value));
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addMeat(meatChooser.options[i].value)
     }
   }
 
-  console.log(finalSandwichPrice);
-});
-
-//Bread
-breadChooser.addEventListener("change", function(event) {
-  selectedBread = event.target.value;
-  finalSandwichPrice += SandwichMaker.addBread(selectedBread);
-  console.log(finalSandwichPrice);
-});
-
-//Cheese
-cheeseChooser.addEventListener("change", function(event) {
+  //loop through and get all selected cheese options
   for (var i = 0; i < cheeseChooser.options.length; i++){
     if (cheeseChooser.options[i].selected){
-      console.log(cheeseChooser.options[i].value);
+      console.log(cheeseChooser.options[i].value, SandwichMaker.addCheese(cheeseChooser.options[i].value));
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addCheese(cheeseChooser.options[i].value)
     }
   }
 
-  console.log(finalSandwichPrice);
-});
-
-
-//Condiments
-condimentsChooser.addEventListener("change", function(event) {
+  //loop through and get all selected condiment options
   for (var i = 0; i < condimentsChooser.options.length; i++){
     if (condimentsChooser.options[i].selected){
-      console.log(condimentsChooser.options[i].value);
+      console.log(condimentsChooser.options[i].value, SandwichMaker.addCondiments(condimentsChooser.options[i].value));
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addCondiments(condimentsChooser.options[i].value)
     }
   }
 
-  console.log(finalSandwichPrice);
-});
 
-
-//Veggies
-veggieChooser.addEventListener("change", function(event) {
+  // loop through and get all selected veggie options
   for (var i = 0; i < veggieChooser.options.length; i++){
     if (veggieChooser.options[i].selected){
-      console.log(veggieChooser.options[i].value);
+      console.log(veggieChooser.options[i].value, SandwichMaker.addVeggies(veggieChooser.options[i].value));
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addVeggies(veggieChooser.options[i].value)
     }
   }
 
+  // loop through and get selected bread option
+  for (var i = 0; i < breadChooser.options.length; i++){
+    if (breadChooser.options[i].selected){
+      console.log(breadChooser.options[i].value, SandwichMaker.addBread(breadChooser.options[i].value));
+
+      // Add the topping to the SandwichMaker to increase the total price
+      finalSandwichPrice += SandwichMaker.addBread(breadChooser.options[i].value)
+    }
+  }
+
+
   console.log(finalSandwichPrice);
-});
+
+}
