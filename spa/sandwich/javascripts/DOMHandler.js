@@ -2,6 +2,11 @@
 var finalSandwichPrice = 0;
 
 
+//reference to the output div
+var outputEl = document.getElementById("output");
+
+
+
 // Get a reference to the <select> element that has all the meat options
 var meatChooser = document.getElementById("meat-chooser");
 
@@ -27,6 +32,8 @@ breadChooser.addEventListener("change", calcPrice)
 
 function calcPrice() {
 
+  var outputHTML = "<h1>Your order</h1>";
+
   // Variable to hold the final price. Default to 0.
   var finalSandwichPrice = 0;
 
@@ -34,6 +41,7 @@ function calcPrice() {
   for (var i = 0; i < meatChooser.options.length; i++){
     if (meatChooser.options[i].selected){
       console.log(meatChooser.options[i].value, SandwichMaker.addMeat(meatChooser.options[i].value));
+      outputHTML += `<div> ${meatChooser.options[i].value} : $${SandwichMaker.addMeat(meatChooser.options[i].value)}</div>`;
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addMeat(meatChooser.options[i].value)
@@ -44,6 +52,7 @@ function calcPrice() {
   for (var i = 0; i < cheeseChooser.options.length; i++){
     if (cheeseChooser.options[i].selected){
       console.log(cheeseChooser.options[i].value, SandwichMaker.addCheese(cheeseChooser.options[i].value));
+      outputHTML += `<div> ${cheeseChooser.options[i].value} : $${SandwichMaker.addCheese(cheeseChooser.options[i].value)}</div>`;
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addCheese(cheeseChooser.options[i].value)
@@ -54,6 +63,7 @@ function calcPrice() {
   for (var i = 0; i < condimentsChooser.options.length; i++){
     if (condimentsChooser.options[i].selected){
       console.log(condimentsChooser.options[i].value, SandwichMaker.addCondiments(condimentsChooser.options[i].value));
+      outputHTML += `<div> ${condimentsChooser.options[i].value} : $${SandwichMaker.addCondiments(condimentsChooser.options[i].value)}</div>`;
 
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addCondiments(condimentsChooser.options[i].value)
@@ -65,7 +75,7 @@ function calcPrice() {
   for (var i = 0; i < veggieChooser.options.length; i++){
     if (veggieChooser.options[i].selected){
       console.log(veggieChooser.options[i].value, SandwichMaker.addVeggies(veggieChooser.options[i].value));
-
+      outputHTML += `<div> ${veggieChooser.options[i].value} : $${SandwichMaker.addVeggies(veggieChooser.options[i].value)}</div>`;
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addVeggies(veggieChooser.options[i].value)
     }
@@ -75,7 +85,7 @@ function calcPrice() {
   for (var i = 0; i < breadChooser.options.length; i++){
     if (breadChooser.options[i].selected){
       console.log(breadChooser.options[i].value, SandwichMaker.addBread(breadChooser.options[i].value));
-
+      outputHTML += `<div> ${breadChooser.options[i].value} Bread : $${SandwichMaker.addBread(breadChooser.options[i].value)}</div>`;
       // Add the topping to the SandwichMaker to increase the total price
       finalSandwichPrice += SandwichMaker.addBread(breadChooser.options[i].value)
     }
@@ -83,5 +93,8 @@ function calcPrice() {
 
 
   console.log(finalSandwichPrice);
+  outputHTML += `<h2> Total : $${finalSandwichPrice}</h2>`;
+
+  outputEl.innerHTML = outputHTML;
 
 }
