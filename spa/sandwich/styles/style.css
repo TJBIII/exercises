@@ -1,0 +1,9 @@
+#output {
+  float: right;
+  margin-right: 10%;
+}
+
+#choices {
+  float: left;
+  margin-left: 10%;
+}
