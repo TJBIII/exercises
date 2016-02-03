@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cdcdcd;
+  color: #000;
+}
+
+.card{
+  float: left;
+  width:15%;
+  padding: 20px;
+  margin: 30px 2.08%;
+  height: 150px;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+#season select{
+  background: #efefef;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  color: #000;
+}
+
