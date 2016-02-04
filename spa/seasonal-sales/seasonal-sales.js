@@ -9,6 +9,8 @@ var categoryData;
 var products;
 var categories;
 
+
+
 function productsLoaded () {
 
   var myCategoryRequest = new XMLHttpRequest();
@@ -30,6 +32,8 @@ function productsLoaded () {
     update();
   }
 }
+
+
 
 function update() {
   productOutputEl.innerHTML = "";
@@ -60,18 +64,24 @@ function update() {
         var productDept = currentCat.name;
       }
 
+      //if the selected season value mathces the product category id then apply the discount
       if (productCatId.toString() === selectedDiscountId){
         //console.log("discount applied");
         productPrice =(productPrice * (1-catDiscount)).toFixed(2);
       }
     }
 
-    var productHTML = `<div class="card"><h4>Product: ${productName}</h4>`;
-    productHTML += `<h4>Price: $${productPrice}</h4>`;
-    productHTML += `<h4>Dept: ${productDept}</h4></div>`;
-    productOutputEl.innerHTML += productHTML;
+    if (currentProduct.price > productPrice){
+      var productHTML = `<div class="card discounted"><h4>Product: ${productName}</h4>`;
+      productHTML += `<h4>Price: $${productPrice}</h4>`;
+      productHTML += `<h4>Dept: ${productDept}</h4><h1>SALE</h1></div>`;
+    } else {
+      var productHTML = `<div class="card"><h4>Product: ${productName}</h4>`;
+      productHTML += `<h4>Price: $${productPrice}</h4>`;
+      productHTML += `<h4>Dept: ${productDept}</h4></div>`;
+    }
+      productOutputEl.innerHTML += productHTML;
   }
-
 }
 
 
