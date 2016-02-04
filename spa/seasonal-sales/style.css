@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #cdcdcd;
+  background-color: #bcf5e7;
   color: #000;
 }
 
@@ -13,6 +13,10 @@ body {
   height: 270px;
   border: 2px solid black;
   box-sizing: border-box;
+}
+
+#season {
+  text-align: center;
 }
 
 #season select{
