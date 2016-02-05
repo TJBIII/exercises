@@ -28,7 +28,9 @@ people.forEach(function(person) {
 var personsEls = document.getElementsByClassName('person');
 
 
+
 for (var i = 0; i < personsEls.length; i++){
+  console.log("personsEls[i]",personsEls[i]);
   personsEls[i].addEventListener("click", function(e){
     focusedOn(e);
   });
@@ -36,9 +38,14 @@ for (var i = 0; i < personsEls.length; i++){
 
 
 function focusedOn(e){
-  console.log(e.target);
-  e.target.toggleClass("bordered");
+  //console.log(e);
+  e.target.classList.add("bordered");
+  
 
+  var inputEl = document.getElementById('text-input');
+
+  inputEl.value = e.target.innerHTML;
+  inputEl.focus();
 
 }
 
