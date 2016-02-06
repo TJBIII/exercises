@@ -1,5 +1,6 @@
-//get reference to container element in DOM
+//get reference to container element and input element in DOM
 var containerEl = document.getElementById('output');
+var inputEl = document.getElementById('text-input');
 
 var title;
 var name;
@@ -28,26 +29,31 @@ people.forEach(function(person) {
 var personsEls = document.getElementsByClassName('person');
 
 
-
 for (var i = 0; i < personsEls.length; i++){
-  console.log("personsEls[i]",personsEls[i]);
+  //console.log("personsEls[i]",personsEls[i]);
   personsEls[i].addEventListener("click", function(e){
     focusedOn(e);
   });
 }
 
+//global variable to store reference to the person div child element that was clicked
+var clickedEl
 
 function focusedOn(e){
   //console.log(e);
   e.target.classList.add("bordered");
   
-
-  var inputEl = document.getElementById('text-input');
-
+  clickedEl = e.target;
+  console.log("clickedEl", clickedEl);
   inputEl.value = e.target.innerHTML;
   inputEl.focus();
-
 }
 
+
+inputEl.addEventListener("keydown", function(e){
+  if (e.keyCode === 13){
+    clickedEl.innerHTML = inputEl.value;
+  }
+});
 
 
