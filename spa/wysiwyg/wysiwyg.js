@@ -53,6 +53,7 @@ function focusedOn(e){
 inputEl.addEventListener("keydown", function(e){
   if (e.keyCode === 13){
     clickedEl.innerHTML = inputEl.value;
+    inputEl.value = "";
   }
 });
 
