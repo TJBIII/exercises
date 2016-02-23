@@ -10,12 +10,11 @@ function duplicateCheck (str) {
   let arrFromStrippedStr = strippedStr.split(" ");
   
   let strippedSet = new Set(arrFromStrippedStr);
-  let arrFromStrippedSet = Array.from(strippedSet);
 
-  // console.log("arrFromStrippedSet", arrFromStrippedSet);
-  // console.log("arrFromStrippedStr", arrFromStrippedStr);
+  console.log("strippedSet", strippedSet);
+  console.log("arrFromStrippedStr", arrFromStrippedStr);
 
-  return arrFromStrippedStr.length === arrFromStrippedSet.length;
+  return arrFromStrippedStr.length === strippedSet.size;
 }
 
 

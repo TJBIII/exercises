@@ -15,6 +15,7 @@ describe('Specification for work checker', function() {
   it('should return false if a string has duplicate words', function() {
     expect(duplicateCheck("one man, one legend")).toBe(false);
     expect(duplicateCheck("this has no duplicates")).toBe(true);
+    expect(duplicateCheck("this example doesnt have one any duplicate words but has a word or two that are very similar to other similarly spelled ones")).toBe(true);
   });
 
   it('should have a verifyAlphaNumeric function', function() {
