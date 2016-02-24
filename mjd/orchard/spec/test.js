@@ -18,7 +18,8 @@ describe('Spec for pear and oak tree orchard simulator', function() {
   });
 
   it('should have a height property on Plant', function() {
-    expect(Plant.height).toBeDefined();
+    // let myPlant = new Plant();
+    expect(new Plant().height).toBeDefined();
   });
 
   it('should be a function named grow on the prototype of Tree', function() {
