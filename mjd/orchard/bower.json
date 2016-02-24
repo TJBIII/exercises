@@ -1,0 +1,16 @@
+{
+  "name": "orchard",
+  "version": "0.0.0",
+  "homepage": "https://github.com/TJBIII/exercises",
+  "authors": [
+    "Thomas Buida <thomasbuida@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

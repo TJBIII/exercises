@@ -1,16 +1,74 @@
+function Vehicle () {
+  this.manufactured_date = Date.now();
+  this.model = null;
+  this.tires = [];
+  this.currentSpeed = 0;
+  // this.direction = null;
+}
+
+Vehicle.prototype.accelerateTo = function (speed) {
+  if (speed <= 0 || speed > 300){
+    return;
+  }
+  this.currentSpeed = speed;
+};
+
+Vehicle.prototype.turn = function (whichWay){
+  this.direction = whichWay;
+}
+
+
+ Vehicle.prototype.changeManufacturedDate = function (newDate) {
+  this.manufactured_date = newDate;
+ };
+
 /*
   Create a function named Car with one property named `manufactured_date`
  */
 
  function Car () {
-  this.manufactured_date = Date.now();
+  
  }
+ Car.prototype = new Vehicle();
 
- Car.prototype.changeManufacturedDate = function (newDate) {
-  this.manufactured_date = newDate;
- };
+
+ function Van () {
+  
+ }
+ Van.prototype = new Vehicle();
+
+
+ function Truck () {
+
+ }
+ Truck.prototype = new Vehicle();
 
  
+
+
+
+function Tire () {
+
+}
+
+
+function Pirelli () {
+
+}
+Pirelli.prototype = new Tire();
+ 
+
+function PExtreme () {
+
+}
+
+PExtreme.prototype = new Pirelli();
+
+
+var tire1 = new PExtreme();
+var tire2 = new PExtreme();
+var tire3 = new PExtreme();
+var tire4 = new PExtreme();
 /*
   Create a function named Make. 
   Set its prototype to the Car function.
@@ -20,9 +78,6 @@
  function Make (maker) {
   this.manufacturer = maker;
  }
-
- Make.prototype = new Car();
-
 
 
 /*
@@ -38,12 +93,23 @@ function Model () {
 Model.prototype = new Make();
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*
     Create a new Make object - your favorite one (e.g. Mini)
 */
 
 var ferrari = new Make("Ferrari");
-console.log("ferrari", ferrari);
+// console.log("ferrari", ferrari);
 
 
 /*
@@ -51,9 +117,7 @@ console.log("ferrari", ferrari);
 */
 
 var enzo = new Model();
-// enzo.manufacturer = "Ferrari";
 enzo.modelName = "Enzo";
-// console.log("enzo", enzo);
 
 /*
     Being an avid car collector, you own three different cars all of
@@ -78,16 +142,8 @@ var enzo1 = new Enzo("Betty");
 var enzo2 = new Enzo("Sunshine");
 var enzo3 = new Enzo("Bob");
 
-// var enzo2 = new Model();
-// enzo2.manufacturer = "Ferrari";
-// enzo2.modelName = "Enzo";
 
-// var enzo3 = new Model();
-// enzo3.manufacturer = "Ferrari";
-// enzo3.modelName = "Enzo";
-
-
-console.log("enzo2", enzo2);
+// console.log("enzo2", enzo2);
 
 
 /*
@@ -113,3 +169,20 @@ var lambo1 = new Model();
 lambo1.manufacturer = "Lamborghini";
 lambo1.modelName = "Gallardo";
 
+
+
+
+
+
+var aNewCar = new Car();
+
+aNewCar.model = enzo1;
+
+console.log("aNewCar", aNewCar);
+
+aNewCar.tires.push(tire1, tire2, tire3, tire4);
+// aNewCar.tires = [tire1, tire2, tire3, tire4];
+
+aNewCar.accelerateTo(30);
+
+aNewCar.turn("left");

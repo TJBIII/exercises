@@ -36,8 +36,8 @@ function squareRoot(a){
 // The user will then type in a new number and press enter.
 // The resulting value of the operation should then be in the text input.
 
-let inputEl = $('#numberInput'), 
-    a,
+let inputEl = $('#numberInput');
+let a,
     b,
     operator;
 
