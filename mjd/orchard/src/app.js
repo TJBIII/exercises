@@ -83,11 +83,11 @@ class Plant {
   }
 
   increaseHeight (growth) {
-    this.height += growth
+    this.height += growth;
   }
 
   decreaseHeight (decay) {
-    this.height -= decay
+    this.height -= decay;
   }
 }
 
@@ -124,7 +124,7 @@ var outputEl = document.getElementById("output");
 var outputHTML;
 
 var count = 0;
-var intervalID = window.setInterval(runStep, 1000);
+var intervalID = setInterval(runStep, 1000);
 
 function runStep() {
 
