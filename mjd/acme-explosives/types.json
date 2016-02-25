@@ -1,0 +1,35 @@
+{
+  "types": [
+    {
+      "id": 0,
+      "category": 0,
+      "name": "personal",
+      "description": "Fireworks intended for recreational use during holiday celebrations."
+    },{
+      "id": 1,
+      "category": 0,
+      "name": "professional",
+      "description": "Fireworks intended for professional firework shows."
+    },{
+      "id": 2,
+      "category": 0,
+      "name": "kid",
+      "description": "Fireworks intended for children without adult supervision."
+    },{
+      "id": 3,
+      "category": 1,
+      "name": "military",
+      "description": "Military grade demolition explosives."
+    },{
+      "id": 4,
+      "category": 1,
+      "name": "construction",
+      "description": "Demolition explosives for engineering/construction firms."
+    },{
+      "id": 5,
+      "category": 1,
+      "name": "personal",
+      "description": "Demolition explosives for home use."
+    }
+  ]
+}
