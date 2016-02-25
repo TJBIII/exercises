@@ -1,0 +1,10 @@
+.container div {
+  color: #fff;
+}
+
+.card {
+  background-color: #677889;
+  height: 300px;
+  /*box-sizing: border-box;*/
+  border: 1px solid black;
+}

@@ -5,22 +5,19 @@
   <title>Acme Explosives</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Select Category<span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Fireworks</a></li>
-    <li><a href="#">Demolition</a></li>
-  </ul>
-</div>
+  <div class="container">
+    <select class="form-control" id="menu">
+        <option>Select Category</option>
+        <option value="0">Fireworks</option>
+        <option value="1">Demolition</option>
+    </select>
 
-
-<div class="row">
-  
-</div>
+    <div id="output"></div>
+  </div>
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -29,5 +26,6 @@
   <!-- my files -->
   <script src="Explosives.js"></script>
   <script src="app.js"></script>
+  <script src="events.js"></script>
 </body>
 </html>

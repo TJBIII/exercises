@@ -1,117 +1,85 @@
 {
   "products": [
     {
-      "fairy_sparklers": {
-          "id": 0,
-          "type": 0,
-          "name": "Fairy Sparklers",
-          "description": "Multi-colored sparklers that are safe for any age."
-      }
+      "id": 0,
+      "type": 0,
+      "name": "Fairy Sparklers",
+      "description": "Multi-colored sparklers that are safe for any age."
     },{
-      "roman_candles": {
           "id": 1,
           "type": 0,
           "name": "Roman Candles",
           "description": "This 8 ball classic gives you all the Blue effects you can handle!"
-      }
     },{
-      "patriot_rockets": {
           "id": 2,
           "type": 0,
           "name": "Patriot Rockets",
           "description": "Red, white, and blue rockets."
-      }
     },{
-      "giant_willows": {
           "id": 3,
           "type": 1,
           "name": "Giant Willows",
           "description": "9 shot willows with color tips."
-      }
     },{
-      "fire_hearts": {
           "id": 4,
           "type": 1,
           "name": "Hearts of Fire",
           "description": "19 shot red cake."
-      }
     },{
-      "kingslayer": {
           "id": 5,
           "type": 1,
           "name": "Kingslayer Artillery Shell",
           "description": "You get 18 of the hardest hitting, most colorful mortars on the market."
-      }
     },{
-      "poppers": {
           "id": 6,
           "type": 2,
           "name": "Poppers",
           "description": "Small poppers that explode when you throw them on the ground."
-      }
     },{
-      "spinners": {
           "id": 7,
           "type": 2,
           "name": "Spinners",
           "description": "Small spinning caps that shoot out colorful sparks."
-      }
     },{
-      "sky_lantern": {
           "id": 8,
           "type": 2,
           "name": "Sky Lantern",
           "description": "Chinese sky lantern that will fly as far as the eye can see."
-      }
     },{
-      "c4": {
           "id": 9,
           "type": 3,
           "name": "C-4 Plastic Explosive",
           "description": "Will take out doors, walls, or an enemy."
-      }
     },{
-      "he_explosive": {
           "id": 10,
           "type": 3,
           "name": "High Energy",
           "description": "High explosives detonate with explosive velocity ranging from 3 to 9 km/s."
-      }
     },{
-      "le_explosive": {
           "id": 11,
           "type": 3,
           "name": "Low Energy",
-          "description": "Low explosives are compounds where the rate of decomposition proceeds through the material at less than the speed of sound."
-      }
+          "description": "Low explosives are compounds where the rate of decomposition proceeds through the material at less than the speed of sound." 
     },{
-      "construction_he": {
           "id": 13,
           "type": 4,
           "name": "High Energy",
           "description": "Used for large building demolition."
-      }
     },{
-      "construction_le": {
           "id": 14,
           "type": 4,
           "name": "Low Energy",
           "description": "Used for small structure demolition."
-      }
     },{
-      "black_powder": {
           "id": 15,
           "type": 5,
           "name": "Black Powder",
           "description": "Buy black powder in bulk to make your own demolition explosives."
-      }
     },{
-      "flash_powder": {
           "id": 16,
           "type": 5,
           "name": "Flash Powder",
           "description": "Buy flash powder in bulk to make your own demolition explosives."
       }
-    }
   ]
 }

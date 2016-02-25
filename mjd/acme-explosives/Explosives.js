@@ -39,6 +39,7 @@ let Explosives = (function() {
         req.send();
       });
     }
+
   }
 
 })();
